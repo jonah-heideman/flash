@@ -3,7 +3,7 @@ class Guess
   attr_reader :card
 
   def initialize(guess, card)
-    @card = card
+    @card  = card
     @guess = guess
   end
 

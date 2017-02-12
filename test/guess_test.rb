@@ -7,9 +7,9 @@ class GuessTest < Minitest::Test
 
   def test_incorrect_guess
     card  = Card.new('question', 'answer')
-    guess = Guess.new('wrong answer', card)
+    guess = Guess.new('wrong', card)
     assert guess.card == card
-    assert guess.response == 'wrong answer'
+    assert guess.response == 'wrong'
     assert !guess.correct?
     assert guess.feedback.include? 'Incorrect'
   end

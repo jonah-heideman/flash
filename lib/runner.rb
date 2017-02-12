@@ -1,6 +1,7 @@
 require_relative 'deck'
 require_relative 'round'
 require_relative 'card'
+require_relative 'guess'
 
 class Runner
 
@@ -27,7 +28,8 @@ class Runner
 
   def ask_question
     puts "\n" + "#{@predicate} #{@round.current_card.question}?".strip
-    guess = @round.record_guess(gets.chomp)
+    guess = Guess.new(gets.chomp, @round.current_card)
+    @round.record_guess(guess)
     puts guess.feedback
   end
 

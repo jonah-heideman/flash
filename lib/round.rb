@@ -1,5 +1,3 @@
-require_relative 'guess'
-
 class Round
 
   attr_reader :guesses
@@ -14,8 +12,7 @@ class Round
     @deck.cards[@current_index]
   end
 
-  def record_guess(guess_input)
-    guess = Guess.new(guess_input, current_card)
+  def record_guess(guess)
     @guesses.push(guess)
     @current_index += 1
     guess
