@@ -21,7 +21,7 @@ class Runner
   def run
     puts "#{@game_name} (#{@deck.count} questions)"
     ask_question until @round.should_stop?
-    puts "Game over! Your score is #{@round.percent_correct}%"
+    puts "\nGame over! Your score is #{@round.percent_correct}% (#{@round.number_correct} correct answer(s))"
   end
 
   def ask_question
