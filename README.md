@@ -25,8 +25,9 @@ ruby {name_of_class}_test.rb
 
 # Create game
 
-in /config, create a file with the format {name_of_game}_config.rb
-in config file, create a hash constant with the following format:
+in /config, create a file with the name format {name_of_game}_config.rb
+
+in config file, create a hash constant with the following structure:
 
 NAME_OF_GAME_CONFIG = {
 
@@ -38,9 +39,9 @@ NAME_OF_GAME_CONFIG = {
   
 }
 
-in the root dir, create a game runner file with the format {name_of_game}.rb
+in the root dir, create a game runner file with the name format {name_of_game}.rb
 
-in game runner file, follow the following code:
+in game runner file, enter the following code:
 
 require_relative 'lib/runner'
 
